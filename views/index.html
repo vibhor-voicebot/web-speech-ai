@@ -11,6 +11,109 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script type="text/javascript">
+    $(document).ready(function(){
+    /* Get iframe src attribute value i.e. YouTube video url
+    and store it in a variable */
+    var url = $("#cartoonVideo").attr('src');
+    
+    /* Assign empty url value to the iframe src attribute when
+    modal hide, which stop the video playing */
+    $("#myModal").on('hide.bs.modal', function(){
+        $("#cartoonVideo").attr('src', '');
+    });
+    
+    /* Assign the initially stored url back to the iframe src
+    attribute when modal is displayed again */
+    $("#myModal").on('show.bs.modal', function(){
+        $("#cartoonVideo").attr('src', url);
+    });
+	
+$('#multi').change(function() {
+    var selectedValues = $(this).val(); 
+    //alert("multi id value is "+selectedValues);
+    if(selectedValues.includes("hackathon")){
+	$("#myModal").modal();
+	}	
+	if(selectedValues.includes("marchtozero")){
+	$("#myModal").modal();
+	}
+	if(selectedValues.includes("chatbot")){
+	$("#myModal").modal();
+	}
+});
+
+$('#multi1').change(function() {
+    var selectedValues = $(this).val();  
+	//alert("multi1 id value is "+selectedValues);
+    if(selectedValues.includes("hackathon")){
+	$("#myModal").modal();
+	}
+	if(selectedValues.includes("marchtozero")){
+	$("#myModal").modal();
+	}
+	if(selectedValues.includes("chatbot")){
+	$("#myModal").modal();
+	}
+});
+
+});
+  </script>
+  <style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+    .modal-content iframe{
+        margin: 0 auto;
+        display: block;
+    }
+.modal.modal-fullscreen .modal-dialog,
+.modal.modal-fullscreen .modal-content {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.modal.modal-fullscreen .modal-dialog {
+  margin: 0;
+  width: 70%;
+  animation-duration:0.6s;
+}
+.modal.modal-fullscreen .modal-content {
+  border: none;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: inherit;
+  -moz-box-shadow: inherit;
+  -o-box-shadow: inherit;
+  box-shadow: inherit;
+  /* change bg color below */
+ /* background:#1abc9c; */
+}
+.modal.modal-fullscreen.force-fullscreen {
+  /* Remove the padding inside the body */
+}
+.modal.modal-fullscreen.force-fullscreen .modal-body {
+  padding: 0;
+}
+.modal.modal-fullscreen.force-fullscreen .modal-header,
+.modal.modal-fullscreen.force-fullscreen .modal-footer {
+  position: absolute;
+  bottom: 0;
+}
+.modal.modal-fullscreen.force-fullscreen .modal-header {
+  top: 0;
+}
+
+
+	.modal-body {
+  height: 100%;
+}
+  </style>
   </head>
 
   <body>
@@ -29,5 +132,20 @@
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/script.js"></script>
+      <!-- Modal HTML -->
+    <div id="myModal" class="modal fade modal-fullscreen  footer-to-bottom" id="myModalFullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog animated zoomInLeft" >
+            <div class="modal-content" >
+                <div class="modal-header" >
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Playing Video....</h4>
+                </div>
+                <div class="modal-body" >
+                    <iframe id="cartoonVideo" src="https://www.youtube.com/embed/YE7VzlLtp-4" style="width:90%; height:90%; border:none; margin:0; padding:0; overflow:hidden; z-index:10;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
   </body>
 </html>
