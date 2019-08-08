@@ -7,7 +7,7 @@
     <meta name="description" content="Welcome to AI Chat Bot with Web Speech API for March To Zero">
     <meta name="author" content="Vibhor Saxena  @vibhor-voicebot">
 
-    <title>Welcome to AI Chat Bot with Web Speech API for March To Zero</title>
+    <title>Welcome to AI Voice Bot with Web Speech API for March To Zero</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -40,6 +40,7 @@ $('#multi').click(function() {
 
 	    $(".output-bot").change(function() {
        		var outputBotValue = $(".output-bot").val();
+		    alert("outbotvalue is"+outputBotValue);
 		 if(outputBotValue.includes("https")) {
 			alert("bot conatins https");
        			$("#myModal").modal();
@@ -123,7 +124,15 @@ $('#multi').click(function() {
           <p>You says: <em class="output-you">...</em></p>
           <p>Bot replies: <em class="output-bot">...</em></p>
       </div>
+	    
+	   
     </section>
+	   <iframe
+    allow="microphone;"
+    width="350"
+    height="430"
+    src="https://console.dialogflow.com/api-client/demo/embedded/86fc8672-6924-4c45-984b-aedce32fc50d">
+</iframe>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/script.js"></script>
