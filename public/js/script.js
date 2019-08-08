@@ -53,11 +53,13 @@ socket.on('bot reply', function(replyText) {
   if(replyText == '') replyText = '(No answer...)';
   outputBot.textContent = replyText;
   
-  if(replyText.includes('https')) replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
-  outputBot.textContent = replyText;
+  if(replyText.includes('https')) 
+  {
+	  	replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
+  		outputBot.textContent = replyText;
 			//alert("bot contains https");
        			$("#myModal").modal();
-		
+  }		
 	
 
   
