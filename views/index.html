@@ -38,9 +38,11 @@ $('#multi').click(function() {
 	
 });
 
-const outputBot = document.querySelector('.output-bot');
-	const outputBotValue = outputBot.text();
-	if(outputBotValue.indexOf("https") > -1) {
+var outputBot = document.querySelector('.output-bot');
+	    var outputBotValue = outputBot.text();
+	    alert("bot value is "+ outputBotValue);
+	if(outputBotValue.includes("https")) {
+		alert("bot conatins https");
         $("#myModal").modal();
 	}
 
