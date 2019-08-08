@@ -32,33 +32,13 @@
         $("#cartoonVideo").attr('src', url);
     });
 	
-$('#multi').change(function() {
-    var selectedValues = $(this).val(); 
-    //alert("multi id value is "+selectedValues);
-    if(selectedValues.includes("hackathon")){
+$('#multi').click(function() {
+    
 	$("#myModal").modal();
-	}	
-	if(selectedValues.includes("marchtozero")){
-	$("#myModal").modal();
-	}
-	if(selectedValues.includes("chatbot")){
-	$("#myModal").modal();
-	}
+	
 });
 
-$('#multi1').change(function() {
-    var selectedValues = $(this).val();  
-	//alert("multi1 id value is "+selectedValues);
-    if(selectedValues.includes("hackathon")){
-	$("#myModal").modal();
-	}
-	if(selectedValues.includes("marchtozero")){
-	$("#myModal").modal();
-	}
-	if(selectedValues.includes("chatbot")){
-	$("#myModal").modal();
-	}
-});
+
 
 });
   </script>
@@ -122,8 +102,8 @@ $('#multi1').change(function() {
       <h3>enabled with Webspeech API</h3> 
       <h2>For March To Zero..!!</h2>
 
-      <button><i class="fa fa-microphone"></i></button>
-
+	    <button><i class="fa fa-microphone"></i></button></br>
+       <input type="button" id="multi" name="multi" value="popUp Video"></button>
       <div>
           <p>You says: <em class="output-you">...</em></p>
           <p>Bot replies: <em class="output-bot">...</em></p>
