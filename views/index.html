@@ -38,13 +38,22 @@ $('#multi').click(function() {
 	
 });
 
-var outputBotValue = $(".output-bot").text();
+	    $(".output-bot").change(function() {
+       		var outputBotValue = $(".output-bot").val();
+		 if(outputBotValue.includes("https")) {
+			alert("bot conatins https");
+       			$("#myModal").modal();
+		}
+	
+});
+	    
+//var outputBotValue = $(".output-bot").text();
 	  
-	    alert("bot value is "+ outputBotValue);
-	if(outputBotValue.includes("https")) {
-		alert("bot conatins https");
-        $("#myModal").modal();
-	}
+	  //  alert("bot value is "+ outputBotValue);
+//	if(outputBotValue.includes("https")) {
+//		alert("bot conatins https");
+  //      $("#myModal").modal();
+//	}
 
 });
   </script>
