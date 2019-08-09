@@ -95,6 +95,21 @@
   </head>
 
   <body>
+	     <!-- Modal HTML -->
+    <div id="myModal" class="modal fade modal-fullscreen  footer-to-bottom" id="myModalFullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog animated zoomInLeft" >
+            <div class="modal-content" >
+                <div class="modal-header" >
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Playing Video....</h4>
+                </div>
+                <div class="modal-body" >
+                    <video controls>
+		  <source src="mtz.mp4" type="video/mp4">
+		 </video>
+                </div>
+            </div>
+        </div>
     <section>
       <h3>Welcome to AI Voice Bot</h3>
       <h3>enabled with Webspeech API</h3> 
@@ -122,21 +137,7 @@
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/script.js"></script>
-      <!-- Modal HTML -->
-    <div id="myModal" class="modal fade modal-fullscreen  footer-to-bottom" id="myModalFullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog animated zoomInLeft" >
-            <div class="modal-content" >
-                <div class="modal-header" >
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Playing Video....</h4>
-                </div>
-                <div class="modal-body" >
-                    <video controls>
-		  <source src="mtz.mp4" type="video/mp4">
-		 </video>
-                </div>
-            </div>
-        </div>
+   
     </div>
 </div> 
   </body>
