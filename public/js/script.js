@@ -58,7 +58,10 @@ socket.on('bot reply', function(replyText) {
 	  	replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
   		outputBot.textContent = replyText;
 			//alert("bot contains https");
-       			$("#myModal").modal();
+       			//$("#myModal").modal();
+	  	    setTimeout(function() {
+    $('#myModal').modal();
+}, 5000);
   }		
 	
 
