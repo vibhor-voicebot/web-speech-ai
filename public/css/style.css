@@ -44,8 +44,6 @@ section {
   width: 400px;
 }
 button {
-  position: absolute;
-  top: 50%;
   display: block;
   -webkit-appearance: none;
   -moz-appearance: none;
