@@ -27,7 +27,36 @@ $('#myModal').on('hidden.bs.modal', function () {
   $('#video1')[0].pause();
 })
 
+	    
+	    
+$('#myModal1').on('shown.bs.modal', function () {
+  $('#video2')[0].play();
+})
+$('#myModal1').on('hidden.bs.modal', function () {
+  $('#video2')[0].pause();
+})
+	    
+$('#myModal2').on('shown.bs.modal', function () {
+  $('#video3')[0].play();
+})
+$('#myModal2').on('hidden.bs.modal', function () {
+  $('#video3')[0].pause();
+})
 
+$('#myModal3').on('shown.bs.modal', function () {
+  $('#video4')[0].play();
+})
+$('#myModal3').on('hidden.bs.modal', function () {
+  $('#video4')[0].pause();
+})
+	    
+$('#myModa4').on('shown.bs.modal', function () {
+  $('#video5')[0].play();
+})
+$('#myModal4').on('hidden.bs.modal', function () {
+  $('#video5')[0].pause();
+})
+	    
 	/*    $(".output-bot").change(function() {
        		var outputBotValue = $(".output-bot").val();
 		    alert("outbotvalue is"+outputBotValue);
@@ -129,6 +158,59 @@ $('#myModal').on('hidden.bs.modal', function () {
             </div>
         </div>
     </div>
+
+    <div id="myModal1" class="modal fade modal-fullscreen  footer-to-bottom" id="myModalFullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog animated zoomInLeft" >
+            <div class="modal-content" >
+               
+                <div class="modal-body" >
+                    <video controls id="video2">
+		  <source src="mtz.mp4" type="video/mp4">
+		 </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal2" class="modal fade modal-fullscreen  footer-to-bottom" id="myModalFullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog animated zoomInLeft" >
+            <div class="modal-content" >
+               
+                <div class="modal-body" >
+                    <video controls id="video3">
+		  <source src="mtz.mp4" type="video/mp4">
+		 </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal3" class="modal fade modal-fullscreen  footer-to-bottom" id="myModalFullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog animated zoomInLeft" >
+            <div class="modal-content" >
+               
+                <div class="modal-body" >
+                    <video controls id="video4">
+		  <source src="mtz.mp4" type="video/mp4">
+		 </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal4" class="modal fade modal-fullscreen  footer-to-bottom" id="myModalFullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog animated zoomInLeft" >
+            <div class="modal-content" >
+               
+                <div class="modal-body" >
+                    <video controls id="video5">
+		  <source src="mtz.mp4" type="video/mp4">
+		 </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div> 
   </body>
 </html>
