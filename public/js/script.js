@@ -87,9 +87,19 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 	
-	 else if(replyText.includes('projectile')) 
+	 else if(replyText.includes('growth')) 
   {
-	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
+	  	replyText = '(Opening the growth projectile presentation now..)'; 
+  		outputBot.textContent = replyText;
+			//alert("bot contains https");
+       			//$("#myModal").modal();
+	  	    setTimeout(function() {
+    $('#myModal3').modal();
+}, 5000);		  
+  }
+		 else if(replyText.includes('projectile')) 
+  {
+	  	replyText = '(Opening the growth projectile presentation now..)'; 
   		outputBot.textContent = replyText;
 			//alert("bot contains https");
        			//$("#myModal").modal();
@@ -100,7 +110,7 @@ socket.on('bot reply', function(replyText) {
 	
 	 else if(replyText.includes('bpm')) 
   {
-	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
+	  	replyText = '(Opening the BPM Morgan presentation now...)'; 
   		outputBot.textContent = replyText;
 			//alert("bot contains https");
        			//$("#myModal").modal();
@@ -109,5 +119,15 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 	
+		 else if(replyText.includes('morgan')) 
+  {
+	  	replyText = '(Opening the BPM Morgan presentation now...)'; 
+  		outputBot.textContent = replyText;
+			//alert("bot contains https");
+       			//$("#myModal").modal();
+	  	    setTimeout(function() {
+    $('#myModal4').modal();
+}, 5000);		  
+  }
 	
 });
