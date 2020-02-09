@@ -65,7 +65,7 @@ socket.on('bot reply', function(replyText) {
   }		
 	
 
-  if(replyText.includes('march to zero')) 
+  else if(replyText.includes('march to zero')) 
   {
 	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
   		outputBot.textContent = replyText;
@@ -76,7 +76,7 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
   
-	  if(replyText.includes('business')) 
+	else  if(replyText.includes('business')) 
   {
 	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
   		outputBot.textContent = replyText;
@@ -87,7 +87,7 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 	
-	  if(replyText.includes('growth projectile')) 
+	 else if(replyText.includes('growth projectile')) 
   {
 	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
   		outputBot.textContent = replyText;
@@ -98,7 +98,7 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 	
-	  if(replyText.includes('bpm morgan')) 
+	 else if(replyText.includes('bpm morgan')) 
   {
 	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
   		outputBot.textContent = replyText;
@@ -108,6 +108,9 @@ socket.on('bot reply', function(replyText) {
     $('#myModal4').modal();
 }, 5000);		  
   }
-	
+	else {
+		replyText = '(Sorry, we dont have this presentation with us at the moment)'; 
+  		outputBot.textContent = replyText;
+	}
 	
 });
