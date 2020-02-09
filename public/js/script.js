@@ -87,7 +87,7 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 	
-	 else if(replyText.includes('growth projectile')) 
+	 else if(replyText.includes('projectile')) 
   {
 	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
   		outputBot.textContent = replyText;
@@ -98,7 +98,7 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 	
-	 else if(replyText.includes('bpm morgan')) 
+	 else if(replyText.includes('bpm')) 
   {
 	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
   		outputBot.textContent = replyText;
