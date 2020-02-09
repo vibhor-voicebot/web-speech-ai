@@ -61,9 +61,53 @@ socket.on('bot reply', function(replyText) {
        			//$("#myModal").modal();
 	  	    setTimeout(function() {
     $('#myModal').modal();
-}, 5000);
+}, 5000);		  
   }		
 	
 
+  if(replyText.includes('march to zero')) 
+  {
+	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
+  		outputBot.textContent = replyText;
+			//alert("bot contains https");
+       			//$("#myModal").modal();
+	  	    setTimeout(function() {
+    $('#myModal1').modal();
+}, 5000);		  
+  }
   
+	  if(replyText.includes('business')) 
+  {
+	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
+  		outputBot.textContent = replyText;
+			//alert("bot contains https");
+       			//$("#myModal").modal();
+	  	    setTimeout(function() {
+    $('#myModal2').modal();
+}, 5000);		  
+  }
+	
+	  if(replyText.includes('growth projectile')) 
+  {
+	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
+  		outputBot.textContent = replyText;
+			//alert("bot contains https");
+       			//$("#myModal").modal();
+	  	    setTimeout(function() {
+    $('#myModal3').modal();
+}, 5000);		  
+  }
+	
+	  if(replyText.includes('bpm morgan')) 
+  {
+	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
+  		outputBot.textContent = replyText;
+			//alert("bot contains https");
+       			//$("#myModal").modal();
+	  	    setTimeout(function() {
+    $('#myModal4').modal();
+}, 5000);		  
+  }
+	
+	
 });
