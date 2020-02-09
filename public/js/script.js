@@ -108,9 +108,6 @@ socket.on('bot reply', function(replyText) {
     $('#myModal4').modal();
 }, 5000);		  
   }
-	else {
-		replyText = '(Sorry, we dont have this presentation with us at the moment)'; 
-  		outputBot.textContent = replyText;
-	}
+	
 	
 });
