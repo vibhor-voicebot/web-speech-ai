@@ -65,7 +65,7 @@ socket.on('bot reply', function(replyText) {
   }		
 	
 
-  else if(replyText.includes('march to zero')) 
+  else if(replyText.toLowerCase().includes('march to zero')) 
   {
 	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
   		outputBot.textContent = replyText;
@@ -76,7 +76,7 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
   
-	else  if(replyText.includes('business')) 
+	else  if(replyText.toLowerCase().includes('business')) 
   {
 	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
   		outputBot.textContent = replyText;
@@ -87,7 +87,7 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 	
-	 else if(replyText.includes('growth')) 
+	 else if(replyText.toLowerCase().includes('growth')) 
   {
 	  	replyText = '(Opening the growth projectile presentation now..)'; 
   		outputBot.textContent = replyText;
@@ -97,7 +97,7 @@ socket.on('bot reply', function(replyText) {
     $('#myModal3').modal();
 }, 5000);		  
   }
-		 else if(replyText.includes('projectile')) 
+		 else if(replyText.toLowerCase().includes('projectile')) 
   {
 	  	replyText = '(Opening the growth projectile presentation now..)'; 
   		outputBot.textContent = replyText;
@@ -108,7 +108,7 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 	
-	 else if(replyText.includes('bpm')) 
+	 else if(replyText.toLowerCase().includes('bpm')) 
   {
 	  	replyText = '(Opening the BPM Morgan presentation now...)'; 
   		outputBot.textContent = replyText;
@@ -119,7 +119,7 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 	
-		 else if(replyText.includes('morgan')) 
+		 else if(replyText.toLowerCase().includes('morgan')) 
   {
 	  	replyText = '(Opening the BPM Morgan presentation now...)'; 
   		outputBot.textContent = replyText;
