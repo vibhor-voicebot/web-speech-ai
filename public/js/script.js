@@ -129,5 +129,49 @@ socket.on('bot reply', function(replyText) {
     $('#myModal4').modal();
 }, 5000);		  
   }
+
+			 else if(replyText.toLowerCase().includes('forex rates')) 
+  {
+	  	replyText = '(Fetching the realtime available forex rates from exchange market now...)'; 
+  		outputBot.textContent = replyText;
+			//alert("bot contains https");
+       			//$("#myModal").modal();
+	  	    setTimeout(function() {
+    $('#myModal5').modal();
+}, 5000);		  
+  }
+
+				 else if(replyText.toLowerCase().includes('rates')) 
+  {
+	  	replyText = '(Fetching the realtime available forex rates from exchange market now...)'; 
+  		outputBot.textContent = replyText;
+			//alert("bot contains https");
+       			//$("#myModal").modal();
+	  	    setTimeout(function() {
+    $('#myModal5').modal();
+}, 5000);		  
+  }
+	
+				 else if(replyText.toLowerCase().includes('forex')) 
+  {
+	  	replyText = '(Fetching the realtime available forex rates from exchange market now...)'; 
+  		outputBot.textContent = replyText;
+			//alert("bot contains https");
+       			//$("#myModal").modal();
+	  	    setTimeout(function() {
+    $('#myModal5').modal();
+}, 5000);		  
+  }
+	
+				 else if(replyText.toLowerCase().includes('quotes data') || replyText.toLowerCase().includes('quotes') || replyText.toLowerCase().includes('symbol')) 
+  {
+	  	replyText = '(Fetching the latest quotes data for available symbols from exchange market now...)'; 
+  		outputBot.textContent = replyText;
+			//alert("bot contains https");
+       			//$("#myModal").modal();
+	  	    setTimeout(function() {
+    $('#myModal6').modal();
+}, 5000);		  
+  }
 	
 });
