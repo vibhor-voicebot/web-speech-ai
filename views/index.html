@@ -147,25 +147,64 @@ $('#myModal4').on('hidden.bs.modal', function () {
 	    
 	   
     </section>
-	<iframe
+	<!--<iframe
     allow="microphone;"
     width="350"
     height="430"
     src="https://console.dialogflow.com/api-client/demo/embedded/86fc8672-6924-4c45-984b-aedce32fc50d">
-</iframe>
+</iframe> -->
       
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/script.js"></script>
 
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container2">
+  <div class="tradingview-widget-container__widget2"></div>
+  <div class="tradingview-widget-copyright2"><a href="https://www.tradingview.com" rel="noopener" target="_blank"></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FX_IDC:AUDUSD",
+      "title": "AUD/USD"
+    },
+    {
+      "proName": "FX_IDC:CADUSD",
+      "title": "CAD/USD"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR/USD"
+    },
+    {
+      "proName": "BITSTAMP:MXNUSD",
+      "title": "MXN/USD"
+    },
+    {
+      "proName": "BITSTAMP:INRUSD",
+      "title": "INR/USD"
+    }
+  ],
+  "colorTheme": "light",
+  "isTransparent": true,
+  "displayMode": "adaptive",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+
 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/currencies/forex-cross-rates/" rel="noopener" target="_blank"><span class="blue-text">Forex Rates</span></a> by TradingView</div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/currencies/forex-cross-rates/" rel="noopener" target="_blank"></a> </div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
   {
   "width": "500",
-  "height": "700",
+  "height": "650",
   "currencies": [
     "EUR",
     "USD",
@@ -227,7 +266,7 @@ $('#myModal4').on('hidden.bs.modal', function () {
   ],
   "chartOnly": false,
   "width": 400,
-  "height": 550,
+  "height": 400,
   "locale": "en",
   "colorTheme": "light",
   "gridLineColor": "#F0F3FA",
