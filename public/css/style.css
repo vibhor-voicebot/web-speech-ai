@@ -55,8 +55,8 @@ button {
   margin: 4em auto 3em;
   text-align: center;
   color: #fff;
-  opacity: 0.5;
-  background: linear-gradient(180deg, #39C2C9 0%, #3FC8C9 80%, #3FC8C9 100%);
+  /* background: linear-gradient(180deg, #39C2C9 0%, #3FC8C9 80%, #3FC8C9 100%); */
+  background: #D8DEDE
   box-shadow: 2px 5px 30px rgba(63, 200, 201, .4);
 
   will-change: transform, filter;
