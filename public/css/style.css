@@ -8,8 +8,12 @@ body {
   margin: 0;
   font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   font-weight: 300;
-  background: #f7f7f7 url(../images/giphy.gif) 0 0 no-repeat;
-  background-size: cover;
+  background: radial-=gradient(#0000, #000000 70%), url(../images/giphy.gif);
+  background-size: 120% 180%;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%
+ 
   color: #333;
 }
 footer {
