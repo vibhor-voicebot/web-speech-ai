@@ -100,7 +100,7 @@ $('#myModal4').on('hidden.bs.modal', function () {
 
 .cmn-t-pulse {
   animation: pulse 1s ease infinite;
-  /* transition: transform 0.2s; */
+   transition: transform 0.2s; 
 }
 
 @keyframes pulse {
@@ -187,9 +187,9 @@ $('#myModal4').on('hidden.bs.modal', function () {
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/script.js"></script>
 
-<iframe style="background-color: rgb(219, 213, 212); box-sizing: border-box; height: 72px; width: 100%;opacity:0.6;" src="https://s.tradingview.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22proName%22%3A%22FX_IDC%3AAUDUSD%22%2C%22title%22%3A%22AUD%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3ACADUSD%22%2C%22title%22%3A%22CAD%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AEURUSD%22%2C%22title%22%3A%22EUR%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AUSDMXN%22%2C%22title%22%3A%22USD%2FMXN%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AINRUSD%22%2C%22title%22%3A%22INR%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AAEDEUR%22%2C%22title%22%3A%22AED%2FEUR%22%7D%5D%2C%22colorTheme%22%3A%22light%22%2C%22isTransparent%22%3Atrue%2C%22displayMode%22%3A%22adaptive%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A44%2C%22utm_source%22%3A%22annualbusinessplanmeeting.herokuapp.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%7D" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
 	  	  
 <!-- TradingView Widget BEGIN -->
+	  <!-- <iframe style="background-color: rgb(219, 213, 212); box-sizing: border-box; height: 72px; width: 100%;opacity:0.6;" src="https://s.tradingview.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22proName%22%3A%22FX_IDC%3AAUDUSD%22%2C%22title%22%3A%22AUD%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3ACADUSD%22%2C%22title%22%3A%22CAD%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AEURUSD%22%2C%22title%22%3A%22EUR%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AUSDMXN%22%2C%22title%22%3A%22USD%2FMXN%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AINRUSD%22%2C%22title%22%3A%22INR%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AAEDEUR%22%2C%22title%22%3A%22AED%2FEUR%22%7D%5D%2C%22colorTheme%22%3A%22light%22%2C%22isTransparent%22%3Atrue%2C%22displayMode%22%3A%22adaptive%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A44%2C%22utm_source%22%3A%22annualbusinessplanmeeting.herokuapp.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%7D" frameborder="0" allowtransparency="true" scrolling="no"></iframe> -->
 <div class="tradingview-widget-container2">
   <div class="tradingview-widget-container__widget2"></div>
   <div class="tradingview-widget-copyright2"><a href="https://www.tradingview.com" rel="noopener" target="_blank"></a></div>
@@ -222,7 +222,7 @@ $('#myModal4').on('hidden.bs.modal', function () {
     }
   ],
   "colorTheme": "light",
-  "isTransparent": true,
+  "isTransparent": false,
   "displayMode": "adaptive",
   "locale": "en"
 }
