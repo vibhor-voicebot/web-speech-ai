@@ -130,6 +130,20 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 
+	
+		
+		 else if(replyText.toLowerCase().includes('voice')) 
+  {
+	  	replyText = '(Opening the Voice BOT presentation now...)'; 
+  		outputBot.textContent = replyText;
+			//alert("bot contains https");
+       			//$("#myModal").modal();
+	  	    setTimeout(function() {
+    $('#myModal8').modal();
+}, 5000);		  
+  }
+	
+	
 			 else if(replyText.toLowerCase().includes('forex rates')) 
   {
 	  	replyText = '(Fetching the realtime available forex rates from exchange market now...)'; 
