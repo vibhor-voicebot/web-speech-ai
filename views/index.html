@@ -57,7 +57,12 @@ $('#myModal4').on('hidden.bs.modal', function () {
   $('#video5')[0].pause();
 })
 	    
-	    
+ $('#myModa8').on('shown.bs.modal', function () {
+  $('#video9')[0].play();
+})
+$('#myModal8').on('hidden.bs.modal', function () {
+  $('#video9')[0].pause();
+})
 	    
 	    
 	/*    $(".output-bot").change(function() {
@@ -323,7 +328,20 @@ float: right;
         </div>
     </div>
 
-	
+
+    <div id="myModal8" class="modal fade modal-fullscreen  footer-to-bottom" id="myModalFullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog animated zoomInLeft" >
+            <div class="modal-content" >
+               
+                <div class="modal-body" >
+                    <video controls id="video9">
+		  <source src="voicebot.mp4" type="video/mp4">
+		 </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
 	
     <div id="myModal5" class="modal fade modal-fullscreen  footer-to-bottom" id="myModalFullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog animated zoomInLeft" >
