@@ -177,7 +177,7 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 	
-				 else if(replyText.toLowerCase().includes('quotes data') || replyText.toLowerCase().includes('quotes') || replyText.toLowerCase().includes('symbol')) 
+				 else if(replyText.toLowerCase().includes('quotes data') || replyText.toLowerCase().includes('quotes') || replyText.toLowerCase().includes('quotation') || replyText.toLowerCase().includes('symbol')) 
   {
 	  	replyText = '(Fetching the latest quotes data for available symbols from exchange market now...)'; 
   		outputBot.textContent = replyText;
