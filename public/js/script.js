@@ -188,7 +188,7 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 
-				 else if(replyText.toLowerCase().includes('sre') || replyText.toLowerCase().includes('SRE Implementation') || replyText.toLowerCase().includes('implementation') || replyText.toLowerCase().includes('SRE')) 
+				 else if(replyText.toLowerCase().includes('site reliability') || replyText.toLowerCase().includes('site') || replyText.toLowerCase().includes('reliability engineering') || replyText.toLowerCase().includes('reliability') || replyText.toLowerCase().includes('site reliability')) 
   {
 	  	replyText = '(Fetching the SRE Implementation Deck now...)'; 
   		outputBot.textContent = replyText;
