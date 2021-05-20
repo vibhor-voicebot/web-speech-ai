@@ -7,7 +7,7 @@
     <meta name="description" content="Welcome to AI VoiceBot enabled with Web Speech API">
     <meta name="author" content="Vibhor Saxena  @vibhor-voicebot">
 
-    <title>Welcome to "AI Voice Bot" - feel conversational experience</title>
+    <title>Welcome to "Genpact's AI Voice Bot" - feel conversational experience</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -62,6 +62,13 @@ $('#myModal4').on('hidden.bs.modal', function () {
 })
 $('#myModal8').on('hidden.bs.modal', function () {
   $('#video9')[0].pause();
+})
+	    
+$('#myModal10').on('shown.bs.modal', function () {
+  $('#video11')[0].play();
+})
+$('#myModall0').on('hidden.bs.modal', function () {
+  $('#video11')[0].pause();
 })
 	    
 	    
@@ -167,23 +174,7 @@ float: right;
   </head>
 
   <body>
-<!--	  </br></br>
-	  <section>
-      <h3>Welcome to TCS built AI VoiceBot</h3>
-      <h3>brings to you</h3> 
-      <h2>The conversational Experience..!!</h2>
-	</br></br>
-	    <div class="wrapper" style="text-align:center;">
-	    <button><img src="../images/Aleskey-Transparent.gif" class="cmn-t-pulse" width="150" height="150"></button>
-	    </div>
-	    </br></br>
-      <div>
-          <p>You says: <em class="output-you">...</em></p>
-          <p>Bot replies: <em class="output-bot">...</em></p>
-      </div>
-	    
-	   
-    </section> -->
+
 	  
 	  <section>
       
@@ -219,8 +210,8 @@ float: right;
     <script src="js/script.js"></script>
 
 	  	  
-<!-- TradingView Widget BEGIN -->
-	  <!-- <iframe style="background-color: rgb(219, 213, 212); box-sizing: border-box; height: 72px; width: 100%;opacity:0.6;" src="https://s.tradingview.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22proName%22%3A%22FX_IDC%3AAUDUSD%22%2C%22title%22%3A%22AUD%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3ACADUSD%22%2C%22title%22%3A%22CAD%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AEURUSD%22%2C%22title%22%3A%22EUR%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AUSDMXN%22%2C%22title%22%3A%22USD%2FMXN%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AINRUSD%22%2C%22title%22%3A%22INR%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AAEDEUR%22%2C%22title%22%3A%22AED%2FEUR%22%7D%5D%2C%22colorTheme%22%3A%22light%22%2C%22isTransparent%22%3Atrue%2C%22displayMode%22%3A%22adaptive%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A44%2C%22utm_source%22%3A%22annualbusinessplanmeeting.herokuapp.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%7D" frameborder="0" allowtransparency="true" scrolling="no"></iframe> -->
+<!-- TradingView Widget BEGIN 
+	   <iframe style="background-color: rgb(219, 213, 212); box-sizing: border-box; height: 72px; width: 100%;opacity:0.6;" src="https://s.tradingview.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22proName%22%3A%22FX_IDC%3AAUDUSD%22%2C%22title%22%3A%22AUD%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3ACADUSD%22%2C%22title%22%3A%22CAD%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AEURUSD%22%2C%22title%22%3A%22EUR%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AUSDMXN%22%2C%22title%22%3A%22USD%2FMXN%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AINRUSD%22%2C%22title%22%3A%22INR%2FUSD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AAEDEUR%22%2C%22title%22%3A%22AED%2FEUR%22%7D%5D%2C%22colorTheme%22%3A%22light%22%2C%22isTransparent%22%3Atrue%2C%22displayMode%22%3A%22adaptive%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A44%2C%22utm_source%22%3A%22annualbusinessplanmeeting.herokuapp.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22ticker-tape%22%7D" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
 <div class="tradingview-widget-container2">
   <div class="tradingview-widget-container__widget2"></div>
   <div class="tradingview-widget-copyright2"><a href="https://www.tradingview.com" rel="noopener" target="_blank"></a></div>
@@ -256,7 +247,7 @@ float: right;
   "isTransparent": false,
   "displayMode": "adaptive",
   "locale": "en"
-}
+} 
   </script>
 </div> 
 <!-- TradingView Widget END -->
@@ -342,13 +333,25 @@ float: right;
         </div>
     </div>
 
+    <div id="myModal10" class="modal fade modal-fullscreen  footer-to-bottom" id="myModalFullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog animated zoomInLeft" >
+            <div class="modal-content" >
+               
+                <div class="modal-body" >
+                    <video controls id="video11">
+		  <source src="SREImplementationVoiceBot.pptx" type="video/mp4">
+		 </video>
+                </div>
+            </div>
+        </div>
+    </div>
 	
     <div id="myModal5" class="modal fade modal-fullscreen  footer-to-bottom" id="myModalFullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog animated zoomInLeft" >
             <div class="modal-content" >
                
                 <div class="modal-body" >
-<!-- TradingView Widget BEGIN -->
+<!-- TradingView Widget BEGIN
 <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
   <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/currencies/forex-cross-rates/" rel="noopener" target="_blank"></a></div>
@@ -385,7 +388,7 @@ float: right;
             <div class="modal-content" >
                
                 <div class="modal-body" >
-<!-- TradingView Widget BEGIN -->
+<!-- TradingView Widget BEGIN 
 <div class="tradingview-widget-container1">
   <div id="tradingview_7de41"></div>
   <div class="tradingview-widget-copyright1"><a href="https://www.tradingview.com/symbols/GOOGL/" rel="noopener" target="_blank"> <a href="https://www.tradingview.com/symbols/MSFT/" rel="noopener" target="_blank"></a> <a href="https://www.tradingview.com/symbols/NSE-TCS/" rel="noopener" target="_blank"></a></div>
