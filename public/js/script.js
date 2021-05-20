@@ -187,5 +187,16 @@ socket.on('bot reply', function(replyText) {
     $('#myModal6').modal();
 }, 5000);		  
   }
+
+				 else if(replyText.toLowerCase().includes('sre') || replyText.toLowerCase().includes('SRE Implementation') || replyText.toLowerCase().includes('implementation') || replyText.toLowerCase().includes('SRE')) 
+  {
+	  	replyText = '(Fetching the SRE Implementation Deck now...)'; 
+  		outputBot.textContent = replyText;
+			//alert("bot contains https");
+       			//$("#myModal").modal();
+	  	    setTimeout(function() {
+    $('#myModal10').modal();
+}, 5000);		  
+  }	
 	
 });
