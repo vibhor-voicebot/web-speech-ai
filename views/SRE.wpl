@@ -1,0 +1,23 @@
+<?wpl version="1.0"?>
+<smil>
+    <head>
+        <meta name="Generator" content="Microsoft Windows Media Player -- 12.0.19041.746"/>
+        <meta name="ItemCount" content="10"/>
+        <meta name="IsFavorite"/>
+        <meta name="ContentPartnerListID"/>
+        <meta name="ContentPartnerNameType"/>
+        <meta name="ContentPartnerName"/>
+        <meta name="Subtitle"/>
+        <author/>
+        <title>SRE</title>
+    </head>
+    <body>
+        <seq>
+            <media src="..\..\Downloads\MSWM - SRE Implementation_Deck_V7 (2)\Slide1.jpg" tid="{EEE20414-E24D-4C7B-947E-FDEA75F2BD32}"/>
+            <media src="..\..\Downloads\MSWM - SRE Implementation_Deck_V7 (2)\Slide2.jpg" tid="{409A7860-331E-44D5-ADAE-68829606B16B}"/>
+            <media src="..\..\Downloads\MSWM - SRE Implementation_Deck_V7 (2)\Slide3.jpg" tid="{CCA5FE49-7A3A-4902-A620-5687CFEA3031}"/>
+            <media src="..\..\Downloads\MSWM - SRE Implementation_Deck_V7 (2)\Slide4.jpg" tid="{A061EED9-367C-4AAF-BAA3-819428F7946E}"/>
+            <media src="..\..\Downloads\MSWM - SRE Implementation_Deck_V7 (2)\Slide5.jpg" tid="{18E3F705-EC14-44FA-BDB3-603EA897137E}"/>
+        </seq>
+    </body>
+</smil>
