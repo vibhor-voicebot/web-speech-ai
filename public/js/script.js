@@ -1,4 +1,4 @@
-'use strict';
+//'use strict';
 
 //const socket = io();
 const socket = io({transports: ["websocket"], upgrade: false});
@@ -30,7 +30,8 @@ recognition.addEventListener('result', (e) => {
   outputYou.textContent = text;
   console.log('Confidence: ' + e.results[0][0].confidence);
 
-  socket.emit('chat message', text);
+  socket.emit("chat message", text);
+	console.log('emitted msg..');
 });
 
 recognition.addEventListener('speechend', () => {
