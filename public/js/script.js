@@ -1,7 +1,7 @@
 'use strict';
 
 //const socket = io();
-const socket = io({transports: [“websocket”], upgrade: false});
+const socket = io({transports: ["websocket"], upgrade: false});
 
 const outputYou = document.querySelector('.output-you');
 const outputBot = document.querySelector('.output-bot');
