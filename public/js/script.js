@@ -1,7 +1,7 @@
-//'use strict';
+'use strict';
 
-//const socket = io();
-const socket = io({transports: ["websocket"], upgrade: false});
+const socket = io();
+//const socket = io({transports: ["websocket"], upgrade: false});
 
 const outputYou = document.querySelector('.output-you');
 const outputBot = document.querySelector('.output-bot');
@@ -202,5 +202,9 @@ socket.on('bot reply', function(replyText) {
     $('#myModal10').modal();
 }, 5000);		  
   }	
-	
+
+	else {
+	replyText = '(no response...)'; 
+  		outputBot.textContent = replyText;
+	}
 });
