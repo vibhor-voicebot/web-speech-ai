@@ -188,8 +188,5 @@ socket.on("bot reply", (text) => {
 }, 5000);		  
   }	
 
-	else {
-	text = '(no response...)'; 
-  		outputBot.textContent = text;
-	}
+	
 });
