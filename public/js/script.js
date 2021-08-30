@@ -1,66 +1,51 @@
-'use strict';
-
+const btn = document.querySelector("button");
+const outputme = document.querySelector(".output-you");
+const outputBot = document.querySelector(".output-bot");
 const socket = io();
-//const socket = io({transports: ["websocket"], upgrade: false});
 
-const outputYou = document.querySelector('.output-you');
-const outputBot = document.querySelector('.output-bot');
+const SpeechRecognition =
+  window.SpeechRecognition || window.webkitSpeechRecognition;
 
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
-recognition.lang = 'en-US';
+recognition.lang = "en-US";
 recognition.interimResults = false;
-recognition.maxAlternatives = 1;
 
-document.querySelector('button').addEventListener('click', () => {
+btn.addEventListener("click", () => {
   recognition.start();
 });
 
-recognition.addEventListener('speechstart', () => {
-  console.log('Speech has been detected.');
-});
+recognition.onresult = function (event) {
+  const last = event.results.length - 1;
+  const text = event.results[last][0].transcript;
+  console.log(text);
 
-recognition.addEventListener('result', (e) => {
-  console.log('Result has been detected.');
-
-  let last = e.results.length - 1;
-  let text = e.results[last][0].transcript;
-
-  outputYou.textContent = text;
-  console.log('Confidence: ' + e.results[0][0].confidence);
+  outputme.textContent = text;
 
   socket.emit("chat message", text);
-	console.log('emitted msg..');
-});
+};
 
-recognition.addEventListener('speechend', () => {
-  recognition.stop();
-});
-
-recognition.addEventListener('error', (e) => {
-  outputBot.textContent = 'Error: ' + e.error;
-});
-
-function synthVoice(text) {
+const botReply = (text) => {
   const synth = window.speechSynthesis;
   const utterance = new SpeechSynthesisUtterance();
   utterance.text = text;
-  console.log('utterance.text..'+text);
+  utterance.pitch = 1;
+  utterance.volume = 1;
   synth.speak(utterance);
-}
+};
 
-socket.on('bot reply', function(replyText) {
-	console.log('replyText..'+replyText);
-  synthVoice(replyText);
-
-  if(replyText == '') replyText = '(No answer...)';
-  outputBot.textContent = replyText;
+socket.on("bot reply", (text) => {
+  outputBot.textContent = text;
+  botReply(text);
+  console.log('replyText: ' + text);
   
-  if(replyText.includes('https')) 
+  if(text == '') text = '(No answer...)';
+  outputBot.textContent = text;
+
+  if(text.includes('https')) 
   {
-	  	replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
-  		outputBot.textContent = replyText;
+	  	text = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
+  		outputBot.textContent = text;
 			//alert("bot contains https");
        			//$("#myModal").modal();
 	  	    setTimeout(function() {
@@ -69,10 +54,10 @@ socket.on('bot reply', function(replyText) {
   }		
 	
 
-  else if(replyText.toLowerCase().includes('march to zero')) 
+  else if(text.toLowerCase().includes('march to zero')) 
   {
 	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
-  		outputBot.textContent = replyText;
+  		outputBot.textContent = text;
 			//alert("bot contains https");
        			//$("#myModal").modal();
 	  	    setTimeout(function() {
@@ -80,10 +65,10 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
   
-	else  if(replyText.toLowerCase().includes('business')) 
+	else  if(text.toLowerCase().includes('business')) 
   {
 	  	//replyText = '(Opening the March To Zero video now...Excited ? Buckle up !!)'; 
-  		outputBot.textContent = replyText;
+  		outputBot.textContent = text;
 			//alert("bot contains https");
        			//$("#myModal").modal();
 	  	    setTimeout(function() {
@@ -91,20 +76,20 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 	
-	 else if(replyText.toLowerCase().includes('growth')) 
+	 else if(text.toLowerCase().includes('growth')) 
   {
-	  	replyText = '(Opening the growth projectile presentation now..)'; 
-  		outputBot.textContent = replyText;
+	  	text = '(Opening the growth projectile presentation now..)'; 
+  		outputBot.textContent = text;
 			//alert("bot contains https");
        			//$("#myModal").modal();
 	  	    setTimeout(function() {
     $('#myModal3').modal();
 }, 5000);		  
   }
-		 else if(replyText.toLowerCase().includes('projectile')) 
+		 else if(text.toLowerCase().includes('projectile')) 
   {
-	  	replyText = '(Opening the growth projectile presentation now..)'; 
-  		outputBot.textContent = replyText;
+	  	text = '(Opening the growth projectile presentation now..)'; 
+  		outputBot.textContent = text;
 			//alert("bot contains https");
        			//$("#myModal").modal();
 	  	    setTimeout(function() {
@@ -112,10 +97,10 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 	
-	 else if(replyText.toLowerCase().includes('bpm')) 
+	 else if(text.toLowerCase().includes('bpm')) 
   {
-	  	replyText = '(Opening the BPM Morgan presentation now...)'; 
-  		outputBot.textContent = replyText;
+	  	text = '(Opening the BPM Morgan presentation now...)'; 
+  		outputBot.textContent = text;
 			//alert("bot contains https");
        			//$("#myModal").modal();
 	  	    setTimeout(function() {
@@ -123,10 +108,10 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 	
-		 else if(replyText.toLowerCase().includes('morgan')) 
+		 else if(text.toLowerCase().includes('morgan')) 
   {
-	  	replyText = '(Opening the BPM Morgan presentation now...)'; 
-  		outputBot.textContent = replyText;
+	  	text = '(Opening the BPM Morgan presentation now...)'; 
+  		outputBot.textContent = text;
 			//alert("bot contains https");
        			//$("#myModal").modal();
 	  	    setTimeout(function() {
@@ -136,10 +121,10 @@ socket.on('bot reply', function(replyText) {
 
 	
 		
-		 else if(replyText.toLowerCase().includes('voice')) 
+		 else if(text.toLowerCase().includes('voice')) 
   {
-	  	replyText = '(Opening the Voice BOT presentation now...)'; 
-  		outputBot.textContent = replyText;
+	  	text = '(Opening the Voice BOT presentation now...)'; 
+  		outputBot.textContent = text;
 			//alert("bot contains https");
        			//$("#myModal").modal();
 	  	    setTimeout(function() {
@@ -148,10 +133,10 @@ socket.on('bot reply', function(replyText) {
   }
 	
 	
-			 else if(replyText.toLowerCase().includes('forex rates')) 
+			 else if(text.toLowerCase().includes('forex rates')) 
   {
-	  	replyText = '(Fetching the realtime available forex rates from exchange market now...)'; 
-  		outputBot.textContent = replyText;
+	  	text = '(Fetching the realtime available forex rates from exchange market now...)'; 
+  		outputBot.textContent = text;
 			//alert("bot contains https");
        			//$("#myModal").modal();
 	  	    setTimeout(function() {
@@ -159,10 +144,10 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 
-				 else if(replyText.toLowerCase().includes('rates')) 
+				 else if(text.toLowerCase().includes('rates')) 
   {
-	  	replyText = '(Fetching the realtime available forex rates from exchange market now...)'; 
-  		outputBot.textContent = replyText;
+	  	text = '(Fetching the realtime available forex rates from exchange market now...)'; 
+  		outputBot.textContent = text;
 			//alert("bot contains https");
        			//$("#myModal").modal();
 	  	    setTimeout(function() {
@@ -170,10 +155,10 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 	
-				 else if(replyText.toLowerCase().includes('forex')) 
+				 else if(text.toLowerCase().includes('forex')) 
   {
-	  	replyText = '(Fetching the realtime available forex rates from exchange market now...)'; 
-  		outputBot.textContent = replyText;
+	  	text = '(Fetching the realtime available forex rates from exchange market now...)'; 
+  		outputBot.textContent = text;
 			//alert("bot contains https");
        			//$("#myModal").modal();
 	  	    setTimeout(function() {
@@ -181,10 +166,10 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 	
-				 else if(replyText.toLowerCase().includes('quotes data') || replyText.toLowerCase().includes('quotes') || replyText.toLowerCase().includes('quotation') || replyText.toLowerCase().includes('symbol')) 
+				 else if(text.toLowerCase().includes('quotes data') || text.toLowerCase().includes('quotes') || text.toLowerCase().includes('quotation') || text.toLowerCase().includes('symbol')) 
   {
-	  	replyText = '(Fetching the latest quotes data for available symbols from exchange market now...)'; 
-  		outputBot.textContent = replyText;
+	  	text = '(Fetching the latest quotes data for available symbols from exchange market now...)'; 
+  		outputBot.textContent = text;
 			//alert("bot contains https");
        			//$("#myModal").modal();
 	  	    setTimeout(function() {
@@ -192,10 +177,10 @@ socket.on('bot reply', function(replyText) {
 }, 5000);		  
   }
 
-				 else if(replyText.toLowerCase().includes('site reliability') || replyText.toLowerCase().includes('site') || replyText.toLowerCase().includes('reliability engineering') || replyText.toLowerCase().includes('reliability') || replyText.toLowerCase().includes('site reliability')) 
+				 else if(text.toLowerCase().includes('site reliability') || text.toLowerCase().includes('site') || text.toLowerCase().includes('reliability engineering') || text.toLowerCase().includes('reliability') || text.toLowerCase().includes('site reliability')) 
   {
-	  	replyText = '(Fetching the SRE Implementation Deck now...)'; 
-  		outputBot.textContent = replyText;
+	  	text = '(Fetching the SRE Implementation Deck now...)'; 
+  		outputBot.textContent = text;
 			//alert("bot contains https");
        			//$("#myModal").modal();
 	  	    setTimeout(function() {
@@ -204,7 +189,7 @@ socket.on('bot reply', function(replyText) {
   }	
 
 	else {
-	replyText = '(no response...)'; 
-  		outputBot.textContent = replyText;
+	text = '(no response...)'; 
+  		outputBot.textContent = text;
 	}
 });
